@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Tangerine:wght@400;700&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="calculator">
+        <img src="image\download (1).jpg" class="bg-poster" alt="city-bg">
+        <h1 class="title">TE<span>Calculator</span>CH</h1>
+        <div class="glass_calculator">
+            <div id="history" class="history"></div>
+            <div class="main-display">
+                <input type="text" placeholder="0" id="display" readonly>
+            </div>
+            <div class="buttons">
+                <button class="btn-sci" onclick="appendspecial('√')">√</button>
+                <button class="btn-sci" onclick="appendspecial('**')">xⁿ</button>
+                <button class="btn-clear" onclick="clearall()">AC</button>
+                <button class="btn-del" onclick="backspace()">DEL</button>
+
+                <button class="btn" onclick="inputNum('7')">7</button>
+                <button class="btn" onclick="inputNum('8')">8</button>
+                <button class="btn" onclick="inputNum('9')">9</button>
+                <button class="btn-operator" onclick="inputOp('/')">÷</button>
+                <button class="btn" onclick="inputNum('4')">4</button>
+                <button class="btn" onclick="inputNum('5')">5</button>
+                <button class="btn" onclick="inputNum('6')">6</button>
+                <button class="btn-operator" onclick="inputOp('*')">×</button>
+                <button class="btn" onclick="inputNum('1')">1</button>
+                <button class="btn" onclick="inputNum('2')">2</button>
+                <button class="btn" onclick="inputNum('3')">3</button>
+                <button class="btn-operator" onclick="inputOp('-')">-</button>
+                <button class="btn" onclick="inputNum('0')">0</button>
+                <button class="btn" onclick="inputNum('.')">.</button>
+                <button class="equal" onclick="solve()">EQUAL</button>
+                <button class="btn-operator" onclick="inputOp('+')">+</button>
+            </div>
+        </div>
+    </div>
+    <script src="file.js"></script>
+</body>
+</html>

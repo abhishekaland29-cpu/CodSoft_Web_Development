@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    
+}
+.bg-poster{
+    width: 100%;
+    position: absolute;
+    filter: blur(5px);
+    height: 100vh;
+}
+.title{
+    position: fixed;
+    color: cornflowerblue;
+    font-size: 8cap;
+    justify-self:center;
+    text-shadow: 10px 10px 34px rgba(0, 0, 0, 100);
+}
+.title span{
+    font-family: 'Tangerine' ;
+    font-size: 40%;
+    color:whitesmoke;
+}
+.glass_calculator {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 25px;
+    width: 350px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    justify-self: center;
+    margin-top: 8%;
+
+    background: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255, 255, 255, 0.8) 0%, 
+        transparent 50%
+    );
+}
+.main-display input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: rgb(132, 255, 104);
+    font-size: 2.5rem;
+    text-align: right;
+    margin-bottom: 10px;
+    outline: none;
+}
+.history{
+    color: rgba(255, 255, 255, 0.6);
+    text-align: right;
+    font-size: 0.9rem;
+    height: 20px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-operator {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: orange;
+    padding: 15px;
+    font-size: 1.6rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.equal {
+    background:  rgb(132, 255, 104);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: black ;
+    padding: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-sci , .btn-clear, .btn-del{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+
+.btn-operator { background: rgba(255, 165, 0, 0.2); color: #ffa500; }
+.equal { background: rgb(132, 255, 104); grid-column: span 1; }
+.btn-clear { background: rgba(255, 71, 87, 0.2); color: #ff4757; }
