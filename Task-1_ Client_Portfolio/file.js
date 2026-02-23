@@ -13,7 +13,6 @@ nextBtn.addEventListener('click', () => {
         counter++;
         wrapper.style.transform = `translateX(${-cardWidth * counter}px)`;
     } else {
-        // Agar aakhri card aa gaya toh wapas 0 par le jao (Optional Loop)
         counter = 0;
         wrapper.style.transform = `translateX(0px)`;
     }
@@ -27,4 +26,5 @@ prevBtn.addEventListener('click', () => {
         counter--;
         wrapper.style.transform = `translateX(${-cardWidth * counter}px)`;
     }
+
 });
