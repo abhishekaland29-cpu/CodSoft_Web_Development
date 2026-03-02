@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLaren-Official</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Tangerine:wght@400;700&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Exo+2:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+             
+        }
+        body {
+            background-color: #0b0b0b;
+            color: #f5f5f5;
+            overflow-x: hidden;
+        }
+        .navcontainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 4%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+        .LOGO-link {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: px;
+            font-style: italic;
+            color: red;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transform: scaleX(1.2);
+            display: inline-block;
+            transform-origin: left;
+            margin-right: 20px;
+        }
+        .nav-element {
+            margin-left: 55%;
+            width: 100%;
+        }
+        .nav-element a {
+            text-decoration: none;
+            margin-left: 15%;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .nav-element a:hover {
+            color: red;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #FF8700;
+            color: #FF8700;
+            padding: 8px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-outline:hover {
+            background: #FF8700;
+            color: black;
+        }
+
+        .hero-section {
+            width: 100%;
+            height: 100vh;
+        }
+        .hero-container {
+            width: 100%;
+            height: 100vh;
+        }
+        .hero-img{
+            width: 100%;
+            opacity: 70%;
+        }
+        .hero-data{
+            position: relative;
+            margin-top: -45%;
+            margin-left: 35%;
+            span{
+                color: red;
+            }
+        }
+        .hero-data h1{
+            font-size: 6rem;
+            font-family: 'Inter', sans-serif;
+            font-style: italic;
+            margin-left: -2%;
+        }
+        .hero-data p {
+            letter-spacing: 5px;
+            word-spacing: 15px;
+            font-style: normal;
+        }
+        .buttons-hero {
+            margin-left: 35%;
+            margin-top: 25%;
+            position: relative;
+        }
+        .Explore {
+            background: transparent;
+            border: 2px solid red;
+            color: red;
+            padding: 8px 25px;
+            margin-left: 5%;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .Explore:hover {
+            background: red;
+            color: black;
+        }
+
+        .spec {
+            margin-top: 10%;
+        }
+        .spec-data {
+            display: inline-flex;
+        }
+        .spec-body {
+            width: 20%;
+            background: transparent;
+            border: 2px solid red;
+            color: whitesmoke;
+            padding: 2%;
+            margin-left: 4%;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .spec-img{
+            width: 100%;
+        } 
+
+        .models-section {
+            margin-top: 10%;
+            width: 100%;
+        }
+        .section-title{
+            text-align: center;
+            font-style: italic;
+            font-family: 'Inter', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 1.005rem;
+            word-spacing: 2rem;
+            span {
+                color: red;
+            }
+        }
+
+        .models-container {
+            display: flexbox;
+            margin: 2%;
+            flex-wrap: wrap;
+            margin-top: 10%;
+        }
+        .model-card {
+            background: #1a1a1a;
+            width: 80%;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.4s;
+            border: 1.5px solid #333;
+            margin-bottom: 30px;
+            display: flex;
+            justify-self: center;
+            margin-top: 5%;
+            height: 60vh;
+        }
+        .model-card:hover {
+            transform: scale(1.05);
+            border-color: red;
+        }
+        .model-card img {
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+        }
+        .card-info {
+            padding: 20px;
+            position: relative;
+        }
+        .card-info h3 {
+            margin-bottom: 10px;
+            color: red;
+            font-size: 3rem;
+        }
+        .spec-list {
+            margin-left: 10%;
+            line-clamp: 5%;
+            strong {
+                color: #FF8700;
+            }
+        }
+        .read-more{
+            margin-left: 5%;
+            color: red;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #050505;
+            color: #ffffff;
+            padding: 3%;
+            margin-top: 15%;
+            border-top: 2px solid #E74C3C;
+        }
+        footer p{
+            color: #999;
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .socials {
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            gap: 30px;
+        }
+        .socials a {
+            margin-top: 2%;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+        }
+        .socials a:hover {
+            color: #E74C3C; 
+            transform: translateY(-3px); 
+            border-bottom: 1px solid #E74C3C; 
+            text-decoration: none;
+        }
+        footer span{
+            color: red;
+        }
+        footer h4 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR START-->
+        <nav >
+            <div class="navcontainer">
+                <div class="logo">
+                    <a href="index.html" class = "LOGO-link">
+                        <span>McLaren</span>
+                    </a>
+
+                </div>
+                <div class="nav-element">
+                    <a href="#Models" class="nav-home">Models</a>
+                    <a href="#Explore" class="nav-about">Explore</a>
+                </div>    
+                <div class="nav-cta">
+                    <button class="btn-outline">Configure</button>
+                </div>            
+            </div>
+        </nav>
+        <!-- NAVBAR ENDS-->
+        <!-- HERO SECTION START-->
+        
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="bg-img"> 
+                    <img src="img\McLaren.jpg" alt="Car-pic" class="hero-img">
+                    <br>
+                </div>
+                
+                <div class="hero-data">
+                    <br>
+                    <h1>Mc<span>Laren</span></h1>
+                    <p>It All Starts With A <span>DREAM</span></p>
+                </div>
+                <div class="buttons-hero">
+                    <button class="Explore">Explore</button>
+                    <button class="Explore">Book Test Drive</button>
+                </div>
+            </div>
+        </section>
+        <!-- HERO SECTION ENDS-->
+        <!-- Specialization SECTION START-->
+        <section id= "" class="spec">
+            <div class="spec-container">
+                <div class="spec-data">
+                    <div class="spec-body">
+                        <img src="img\max speed.jpg" class="spec-img" alt="">
+                        <br>
+                        <br> 
+                        <h3>0-100 KM/H</h3>
+                        <p>2.8 Seconds</p>
+                    </div>
+                    <div class="spec-body">
+                        <img src="img\spedometer.jpg" class="spec-img" alt="">
+                        <br><br>
+                        <h3>MAX SPEED</h3>
+                        <p>332 KM/H</p>
+                    </div>
+                    <div class="spec-body">
+                        <img src="img\max power.jpg" class="spec-img" alt="">
+                        <br><br>
+                        <h3>MAX Power</h3>
+                        <p>750 PS</p>
+                    </div>
+                    <div class="spec-body">
+                        <img src="img\weight.jpg" class="spec-img" alt="">
+                        <br><br>
+                        <h3>Weight</h3>
+                        <p>1,277 KG</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Specialization SECTION ENDS-->
+        <!-- Models SECTION STARTS-->
+        <section class="models-section" id="models">
+            <h2 class="section-title">CHOOSE YOUR <span>PERFORMANCE</span></h2>
+            <div class="models-container">
+                <div class="model-card">
+                    <img src="img\McLaren 750S Car Poster.jpg" alt="McLaren 750S">
+                    <div class="card-info">
+                        <h3>McLaren 750S</h3>
+                        <p>The new benchmark in supercar performance.</p>
+                        <br>
+                        <ul class="spec-list">
+                            <li><strong>Engine:</strong> 4.0L V8 Twin-Turbo with 750PS power.</li>
+                            <li><strong>Acceleration:</strong> Blistering 0-100 km/h in just 2.8 seconds.</li>
+                            <li><strong>Weight:</strong> 30kg lighter than 720S, making it the lightest in class.</li>
+                            <li><strong>Aero:</strong> Features an enlarged active rear wing for superior downforce.</li>
+                            <li><strong>Exhaust:</strong> New central-exit stainless steel exhaust for a raw F1 sound.</li>
+                        </ul>
+                        <br>
+                        <a href="#" class="read-more">View Details →</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <img src="img\Artura-Spider-Price-List-Cover-Image-1024x851.jpg" alt="McLaren Artura">
+                    <div class="card-info">
+                        <h3>McLaren Artura</h3>
+                        <p>High-performance Hybrid. The future of speed.</p>
+                        <br>
+                        <ul class="spec-list">
+                            <li><strong>Hybrid Power:</strong> High-performance V6 paired with an E-motor.</li>
+                            <li><strong>EV Mode:</strong> Ability to drive up to 31km on pure electric silent power.</li>
+                            <li><strong>Innovation:</strong> First-ever 8-speed gearbox without a mechanical reverse gear.</li>
+                            <li><strong>Cyber Tyres:</strong> Pirelli tyres with integrated sensors for real-time data.</li>
+                            <li><strong>Chassis:</strong> Built on the all-new McLaren Carbon Lightweight Architecture (MCLA).</li>
+                        </ul>
+                        <br>
+                        <a href="#" class="read-more">View Details</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <img src="img\McLaren 570S GT4 2018 Digital Poster - Jaypads.jpg" alt="McLaren GT">
+                    <div class="card-info">
+                        <h3>McLaren GT</h3>
+                        <p>Reimagining the Grand Tourer. Elegant & Fast.</p>
+                        <br>
+                        <ul class="spec-list">
+                            <li><strong>Storage:</strong> Massive 570-litre total luggage capacity for long trips.</li>
+                            <li><strong>Comfort:</strong> Proactive Chassis Control for a smooth, refined ride quality.</li>
+                            <li><strong>Ground Clearance:</strong> Optimized 110mm clearance to handle city speed bumps.</li>
+                            <li><strong>Interior:</strong> Luxurious cabin featuring Softgrain Leather and Alcantara.</li>
+                            <li><strong>Heat Shielding:</strong> NASA-grade thermal protection for the rear luggage bay.</li>
+                        </ul>
+                        <br>
+                        <a href="#" class="read-more">View Details  </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Models SECTION ENDS-->
+        <footer>
+            <p>&copy; 2026 McLaren Automotive. Engineered for Perfection.</p>
+            <br>
+            <h4><strong>Gmail : </strong><span>mcLarenofficial@xyz.com</span></h4>
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </footer>
+</body>
+</html>
